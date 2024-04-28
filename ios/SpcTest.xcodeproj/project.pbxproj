@@ -9,11 +9,20 @@
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* SpcTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* SpcTestTests.m */; };
 		0C80B921A6F3F58F76C31292 /* libPods-SpcTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-SpcTest.a */; };
+		0FBE3D4C4B5B4D88B75B6C1D /* Outfit-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BFF4774393164EBF83C1A075 /* Outfit-Regular.ttf */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		67C6CDE93A06468F97966AB9 /* Outfit-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1AC9F97CB66E4B2696C5D34D /* Outfit-Black.ttf */; };
+		72353D81E76243C58093F337 /* Outfit-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BC44B3B2347D475EB60184F1 /* Outfit-Medium.ttf */; };
 		7699B88040F8A987B510C191 /* libPods-SpcTest-SpcTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-SpcTest-SpcTestTests.a */; };
+		770B9C4C49E74BB8A2A34914 /* Outfit-Thin.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0F55D2911A944BA391B500D9 /* Outfit-Thin.ttf */; };
+		78385E115450401EAFF2D88C /* Outfit-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FC5EFF6B6BDA444BA06E99DA /* Outfit-ExtraLight.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		B8085D91A15A479092EE0AD4 /* Outfit-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 87F58D04B9664933A8DD2C87 /* Outfit-ExtraBold.ttf */; };
+		BC9A1911BB1047B5B7DCD5BA /* Outfit-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A4BD8C447E0041FABFFC5438 /* Outfit-SemiBold.ttf */; };
+		CDA0B78201194C409FFD628D /* Outfit-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7FB11122FB5B414B9DEA5025 /* Outfit-Light.ttf */; };
+		F7ED3CEA9A4446D49C7F0257 /* Outfit-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F454E23893E8443DB2518B82 /* Outfit-Bold.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +39,7 @@
 		00E356EE1AD99517003FC87E /* SpcTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpcTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* SpcTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpcTestTests.m; sourceTree = "<group>"; };
+		0F55D2911A944BA391B500D9 /* Outfit-Thin.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Thin.ttf"; path = "../src/assets/fonts/Outfit-Thin.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* SpcTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpcTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = SpcTest/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = SpcTest/AppDelegate.mm; sourceTree = "<group>"; };
@@ -37,13 +47,21 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SpcTest/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SpcTest/main.m; sourceTree = "<group>"; };
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-SpcTest-SpcTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpcTest-SpcTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		1AC9F97CB66E4B2696C5D34D /* Outfit-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Black.ttf"; path = "../src/assets/fonts/Outfit-Black.ttf"; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-SpcTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpcTest.debug.xcconfig"; path = "Target Support Files/Pods-SpcTest/Pods-SpcTest.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-SpcTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpcTest.release.xcconfig"; path = "Target Support Files/Pods-SpcTest/Pods-SpcTest.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-SpcTest-SpcTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpcTest-SpcTestTests.debug.xcconfig"; path = "Target Support Files/Pods-SpcTest-SpcTestTests/Pods-SpcTest-SpcTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-SpcTest.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SpcTest.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		7FB11122FB5B414B9DEA5025 /* Outfit-Light.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Light.ttf"; path = "../src/assets/fonts/Outfit-Light.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = SpcTest/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		87F58D04B9664933A8DD2C87 /* Outfit-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraBold.ttf"; path = "../src/assets/fonts/Outfit-ExtraBold.ttf"; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-SpcTest-SpcTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpcTest-SpcTestTests.release.xcconfig"; path = "Target Support Files/Pods-SpcTest-SpcTestTests/Pods-SpcTest-SpcTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		A4BD8C447E0041FABFFC5438 /* Outfit-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-SemiBold.ttf"; path = "../src/assets/fonts/Outfit-SemiBold.ttf"; sourceTree = "<group>"; };
+		BC44B3B2347D475EB60184F1 /* Outfit-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Medium.ttf"; path = "../src/assets/fonts/Outfit-Medium.ttf"; sourceTree = "<group>"; };
+		BFF4774393164EBF83C1A075 /* Outfit-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Regular.ttf"; path = "../src/assets/fonts/Outfit-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F454E23893E8443DB2518B82 /* Outfit-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-Bold.ttf"; path = "../src/assets/fonts/Outfit-Bold.ttf"; sourceTree = "<group>"; };
+		FC5EFF6B6BDA444BA06E99DA /* Outfit-ExtraLight.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = "Outfit-ExtraLight.ttf"; path = "../src/assets/fonts/Outfit-ExtraLight.ttf"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +140,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				9C4FFA2D96F9447BA8E82D34 /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -135,6 +154,23 @@
 				00E356EE1AD99517003FC87E /* SpcTestTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9C4FFA2D96F9447BA8E82D34 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1AC9F97CB66E4B2696C5D34D /* Outfit-Black.ttf */,
+				F454E23893E8443DB2518B82 /* Outfit-Bold.ttf */,
+				87F58D04B9664933A8DD2C87 /* Outfit-ExtraBold.ttf */,
+				FC5EFF6B6BDA444BA06E99DA /* Outfit-ExtraLight.ttf */,
+				7FB11122FB5B414B9DEA5025 /* Outfit-Light.ttf */,
+				BC44B3B2347D475EB60184F1 /* Outfit-Medium.ttf */,
+				BFF4774393164EBF83C1A075 /* Outfit-Regular.ttf */,
+				A4BD8C447E0041FABFFC5438 /* Outfit-SemiBold.ttf */,
+				0F55D2911A944BA391B500D9 /* Outfit-Thin.ttf */,
+			);
+			name = Resources;
+			path = "";
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -244,6 +280,15 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				67C6CDE93A06468F97966AB9 /* Outfit-Black.ttf in Resources */,
+				F7ED3CEA9A4446D49C7F0257 /* Outfit-Bold.ttf in Resources */,
+				B8085D91A15A479092EE0AD4 /* Outfit-ExtraBold.ttf in Resources */,
+				78385E115450401EAFF2D88C /* Outfit-ExtraLight.ttf in Resources */,
+				CDA0B78201194C409FFD628D /* Outfit-Light.ttf in Resources */,
+				72353D81E76243C58093F337 /* Outfit-Medium.ttf in Resources */,
+				0FBE3D4C4B5B4D88B75B6C1D /* Outfit-Regular.ttf in Resources */,
+				BC9A1911BB1047B5B7DCD5BA /* Outfit-SemiBold.ttf in Resources */,
+				770B9C4C49E74BB8A2A34914 /* Outfit-Thin.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
