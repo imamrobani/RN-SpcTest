@@ -1,19 +1,17 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {View} from 'react-native';
 
 // component
 import {CategoryIcon} from '@components';
 
 // styles
 import styles from './styles';
+import TitleSection from './TitleSection';
 
 const CategorySection = () => {
   return (
     <>
-      <View style={styles.rowBetween}>
-        <Text style={styles.title}>Categories</Text>
-        <Text style={styles.titleHeader}>See All</Text>
-      </View>
+      <TitleSection title="Categories" />
       <View style={styles.categoryContainer}>
         <CategoryIcon iconName="icCleaning" name="Cleaning" />
         <CategoryIcon iconName="icRepairing" name="Repairing" />

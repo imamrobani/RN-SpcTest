@@ -62,7 +62,17 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     flexWrap: 'wrap',
     rowGap: scale(16),
-    // marginHorizontal: scale(-8),
+    marginBottom: scale(8),
+  },
+
+  // recommend section
+  gapRecomend: {
+    gap: scale(16),
+    marginBottom: scale(8),
+  },
+  chipContainer: {
+    flexDirection: 'row',
+    gap: 8,
   },
 });
 

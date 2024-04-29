@@ -6,6 +6,11 @@ const styles = StyleSheet.create({
   container: {
     padding: scale(16),
   },
+  contentContainer: {
+    flexGrow: 1,
+    padding: scale(16),
+    gap: 16,
+  },
 });
 
 export default styles;

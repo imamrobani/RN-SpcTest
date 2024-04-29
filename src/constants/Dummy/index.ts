@@ -1,0 +1,42 @@
+export const ServiceList = [
+  {
+    id: 1,
+    name: 'House Cleaning',
+    price: '₦ 1,100',
+    rating: '4.8',
+    reviews: '8,289',
+    image: 'https://picsum.photos/400/400',
+  },
+  {
+    id: 2,
+    name: 'House Cleaning',
+    price: '₦ 1,100',
+    rating: '4.8',
+    reviews: '8,289',
+    image: 'https://picsum.photos/400/400',
+  },
+  {
+    id: 3,
+    name: 'House Cleaning',
+    price: '₦ 1,100',
+    rating: '4.8',
+    reviews: '8,289',
+    image: 'https://picsum.photos/400/400',
+  },
+  {
+    id: 4,
+    name: 'House Cleaning',
+    price: '₦ 1,100',
+    rating: '4.8',
+    reviews: '8,289',
+    image: 'https://picsum.photos/400/400',
+  },
+  {
+    id: 5,
+    name: 'House Cleaning',
+    price: '₦ 1,100',
+    rating: '4.8',
+    reviews: '8,289',
+    image: 'https://picsum.photos/400/400',
+  },
+];
