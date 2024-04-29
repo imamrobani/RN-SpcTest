@@ -14,11 +14,13 @@ import CategorySection from './fragment/CategorySection';
 import BannerSection from './fragment/BannerSection';
 import RecommendList from './fragment/RecommendList';
 import FilterChip from './fragment/FilterChip';
+import SearchHome from './fragment/SearchHome';
 
 const Home = () => {
   const renderHeader = () => {
     return (
       <>
+        <SearchHome />
         <BannerSection />
         <CategorySection />
         <RecommendList />
