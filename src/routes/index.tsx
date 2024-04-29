@@ -1,7 +1,7 @@
 import React from 'react';
 import {createStackNavigator} from '@react-navigation/stack';
-import {Bookmark, Home, Splash} from '../screens';
-import {Colors} from '../constants';
+import {Bookmark, Home, Splash} from '@screens';
+import {Colors} from '@constants';
 
 const Stack = createStackNavigator<RootStackParamList>();
 

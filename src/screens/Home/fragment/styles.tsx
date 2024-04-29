@@ -1,6 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {scale} from '../../../utils';
-import {Colors, Fonts} from '../../../constants';
+import {scale} from '@utils';
+import {Colors, Fonts} from '@constants';
 
 const styles = StyleSheet.create({
   // header
@@ -41,12 +41,19 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: scale(16),
+    marginVertical: scale(16),
   },
   title: {
     fontFamily: Fonts.OUTFIT_MEDIUM,
     fontSize: scale(18),
     color: Colors.BLACK,
+  },
+
+  // banner section
+  banner: {
+    width: '100%',
+    height: scale(155),
+    borderRadius: scale(30),
   },
 
   // category section

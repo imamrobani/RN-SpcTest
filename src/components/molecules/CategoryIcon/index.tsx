@@ -2,11 +2,11 @@ import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 
 // component
-import {Icon} from '../../atoms';
+import {Icon} from '@components/atoms';
 
 // styles
 import styles from './styles';
-import {Colors} from '../../../constants';
+import {Colors} from '@constants';
 
 type CategoryIconProps = {
   iconName?: IconName;

@@ -3,10 +3,10 @@ import {View, Text, Image} from 'react-native';
 
 // styles
 import styles from './styles';
-import {ImgHi, ImgUserDummy} from '../../../assets';
+import {ImgHi, ImgUserDummy} from '@assets';
 
 // component
-import {Icon} from '../../../components';
+import {Icon} from '@components';
 
 const HeaderHome = () => {
   return (

@@ -2,7 +2,7 @@ import React from 'react';
 import {Text, View} from 'react-native';
 
 // component
-import {CategoryIcon} from '../../../components';
+import {CategoryIcon} from '@components';
 
 // styles
 import styles from './styles';

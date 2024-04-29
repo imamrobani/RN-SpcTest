@@ -3,7 +3,7 @@ import React, {memo} from 'react';
 import {View, ViewStyle} from 'react-native';
 
 // styles
-import {Colors} from '../../../constants';
+import {Colors} from '@constants';
 
 // assets
 import {
@@ -28,8 +28,8 @@ import {
   icTool,
   icTruck,
   icUser,
-} from '../../../assets';
-import {scale} from '../../../utils';
+} from '@assets';
+import {scale} from '@utils';
 
 type Props = {
   name: IconName;
