@@ -1,10 +1,10 @@
 import {StyleSheet} from 'react-native';
+import {scale} from '../../utils';
 
 const styles = StyleSheet.create({
+  page: {flex: 1},
   container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    padding: scale(16),
   },
 });
 

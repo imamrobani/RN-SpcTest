@@ -6,7 +6,7 @@ export {default as icBookmark} from './ic_bookmark.svg';
 export {default as icBookmarkFill} from './ic_bookmark_fill.svg';
 export {default as icCleaning} from './ic_cleaning.svg';
 export {default as icFilter} from './ic_filter.svg';
-export {default as iclaundry} from './ic_laundry.svg';
+export {default as icLaundry} from './ic_laundry.svg';
 export {default as icLocation} from './ic_location.svg';
 export {default as icMarkerLocation} from './ic_marker_location.svg';
 export {default as icMessage} from './ic_message.svg';

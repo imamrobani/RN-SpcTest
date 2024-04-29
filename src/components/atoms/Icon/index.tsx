@@ -15,6 +15,7 @@ import {
   icBookmarkFill,
   icCleaning,
   icFilter,
+  icLaundry,
   icLocation,
   icMarkerLocation,
   icMessage,
@@ -27,8 +28,8 @@ import {
   icTool,
   icTruck,
   icUser,
-  iclaundry,
 } from '../../../assets';
+import {scale} from '../../../utils';
 
 type Props = {
   name: IconName;
@@ -57,8 +58,8 @@ const getSource = (name: IconName) => {
       return icCleaning;
     case 'icFilter':
       return icFilter;
-    case 'iclaundry':
-      return iclaundry;
+    case 'icLaundry':
+      return icLaundry;
     case 'icLocation':
       return icLocation;
     case 'icMarkerLocation':
@@ -89,7 +90,7 @@ const getSource = (name: IconName) => {
 const Icon: React.FC<Props> = props => {
   const {
     name,
-    width,
+    width = 24,
     height = 24,
     size = 24,
     fillColor = Colors.WHITE,
@@ -102,8 +103,8 @@ const Icon: React.FC<Props> = props => {
     <View style={style}>
       <ImportedIcon
         style={{color: fillColor}}
-        width={size || width}
-        height={size || height}
+        width={scale(size) || scale(width)}
+        height={scale(size) || scale(height)}
         fill={fillColor}
       />
     </View>

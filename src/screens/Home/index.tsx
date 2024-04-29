@@ -1,12 +1,21 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {SafeAreaView, View} from 'react-native';
+
+// styles
 import styles from './styles';
+
+// fragment
+import HeaderHome from './fragment/HeaderHome';
+import CategorySection from './fragment/CategorySection';
 
 const Home = () => {
   return (
-    <View style={styles.container}>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={styles.page}>
+      <HeaderHome />
+      <View style={styles.container}>
+        <CategorySection />
+      </View>
+    </SafeAreaView>
   );
 };
 
