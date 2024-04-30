@@ -1,5 +1,5 @@
 import React from 'react';
-import {FlatList, SafeAreaView} from 'react-native';
+import {FlatList, View} from 'react-native';
 
 // styles
 import styles from './styles';
@@ -33,7 +33,7 @@ const Home = () => {
   };
 
   return (
-    <SafeAreaView style={styles.page}>
+    <View style={styles.page}>
       <HeaderHome />
       <FlatList
         data={ServiceList}
@@ -43,7 +43,7 @@ const Home = () => {
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}
       />
-    </SafeAreaView>
+    </View>
   );
 };
 

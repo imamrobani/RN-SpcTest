@@ -7,6 +7,7 @@ type IconName =
   | 'icBookmarkFill'
   | 'icCleaning'
   | 'icFilter'
+  | 'icHome'
   | 'icLaundry'
   | 'icLocation'
   | 'icMarkerLocation'

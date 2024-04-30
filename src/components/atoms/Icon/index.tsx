@@ -15,6 +15,7 @@ import {
   icBookmarkFill,
   icCleaning,
   icFilter,
+  icHome,
   icLaundry,
   icLocation,
   icMarkerLocation,
@@ -58,6 +59,8 @@ const getSource = (name: IconName) => {
       return icCleaning;
     case 'icFilter':
       return icFilter;
+    case 'icHome':
+      return icHome;
     case 'icLaundry':
       return icLaundry;
     case 'icLocation':

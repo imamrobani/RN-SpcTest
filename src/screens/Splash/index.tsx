@@ -14,7 +14,7 @@ const Splash: React.FC<Props> = ({navigation}) => {
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
-      navigation.navigate('Home');
+      navigation.navigate('MainApp');
     }, 2000);
 
     return () => {
@@ -28,7 +28,7 @@ const Splash: React.FC<Props> = ({navigation}) => {
     <View style={styles.page}>
       <TouchableOpacity
         activeOpacity={0.7}
-        onPress={() => navigation.navigate('Home')}>
+        onPress={() => navigation.navigate('MainApp')}>
         <Text style={{fontFamily: Fonts.OUTFIT_REGULAR}}>Splash Screen</Text>
       </TouchableOpacity>
     </View>
