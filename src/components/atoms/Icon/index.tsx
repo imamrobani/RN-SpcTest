@@ -2,9 +2,6 @@
 import React, {memo} from 'react';
 import {View, ViewStyle} from 'react-native';
 
-// styles
-import {Colors} from '@constants';
-
 // assets
 import {
   icArrowLeft,
@@ -96,7 +93,7 @@ const Icon: React.FC<Props> = props => {
     width = 24,
     height = 24,
     size = 24,
-    fillColor = Colors.WHITE,
+    fillColor = 'none',
     style,
   } = props;
 

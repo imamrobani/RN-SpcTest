@@ -51,15 +51,6 @@ const styles = StyleSheet.create({
     gap: 16,
   },
   flex1: {flex: 1},
-  btnCurrLoc: {
-    justifyContent: 'center',
-    alignItems: 'center',
-    width: scale(60),
-    backgroundColor: Colors.SPC_BACKGROUND_LIGHT_GRAY,
-    borderRadius: 8,
-    borderWidth: 1,
-    borderColor: Colors.SPC_BACKGROUND_GRAY,
-  },
   title: {
     fontFamily: Fonts.OUTFIT_MEDIUM,
     fontSize: scale(18),

@@ -36,7 +36,7 @@ const Icons = ({label, focus}: {label: string; focus: boolean}) => {
         <Icon name="icUser" fillColor={Colors.WHITE} size={20} />
       );
     default:
-      return <Icon name="icBell" fillColor={Colors.BLACK} size={20} />;
+      return <Icon name="icHome" fillColor={Colors.WHITE} size={20} />;
   }
 };
 

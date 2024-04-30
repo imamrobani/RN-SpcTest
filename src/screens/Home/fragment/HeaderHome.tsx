@@ -1,5 +1,8 @@
 import React from 'react';
-import {View, Text, Image} from 'react-native';
+import {View, Text, Image, TouchableOpacity} from 'react-native';
+import {CompositeNavigationProp, useNavigation} from '@react-navigation/native';
+import {BottomTabNavigationProp} from '@react-navigation/bottom-tabs';
+import {StackNavigationProp} from '@react-navigation/stack';
 
 // styles
 import styles from './styles';
@@ -8,7 +11,14 @@ import {ImgHi, ImgUserDummy} from '@assets';
 // component
 import {Icon} from '@components';
 
+type Props = CompositeNavigationProp<
+  BottomTabNavigationProp<BottomTabParamLst, 'Home'>,
+  StackNavigationProp<RootStackParamList>
+>;
+
 const HeaderHome = () => {
+  const navigation = useNavigation<Props>();
+
   return (
     <View style={styles.headerContainer}>
       <View style={styles.rowUser}>
@@ -25,7 +35,11 @@ const HeaderHome = () => {
       </View>
       <View style={styles.rowIcon}>
         <Icon name="icBell" />
-        <Icon name="icBookmark" />
+        <TouchableOpacity
+          activeOpacity={0.7}
+          onPress={() => navigation.navigate('Bookmark')}>
+          <Icon name="icBookmark" />
+        </TouchableOpacity>
       </View>
     </View>
   );

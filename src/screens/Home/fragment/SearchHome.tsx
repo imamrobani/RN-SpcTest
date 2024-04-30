@@ -1,8 +1,8 @@
 import React from 'react';
-import {TouchableOpacity, View} from 'react-native';
+import {View} from 'react-native';
 
 // component
-import {Icon, TextField} from '@components';
+import {IconButton, TextField} from '@components';
 
 // styles
 import styles from './styles';
@@ -27,9 +27,12 @@ const SearchHome = () => {
             height={50}
           />
         </View>
-        <TouchableOpacity activeOpacity={0.7} style={styles.btnCurrLoc}>
-          <Icon name={'icLocation'} />
-        </TouchableOpacity>
+        <IconButton
+          icon={'icLocation'}
+          width={60}
+          backgroundColor={Colors.SPC_BACKGROUND_LIGHT_GRAY}
+          borderColor={Colors.SPC_BACKGROUND_GRAY}
+        />
       </View>
     </View>
   );
