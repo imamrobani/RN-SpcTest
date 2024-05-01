@@ -26,12 +26,12 @@ const styles = StyleSheet.create({
   },
   iconContainerActive: {
     backgroundColor: Colors.SPC_BACKGROUND_GRAY,
-    padding: scale(6),
+    padding: scale(8),
     borderRadius: 16,
   },
   iconContainerInActive: {
     backgroundColor: Colors.WHITE,
-    padding: scale(6),
+    padding: scale(8),
     borderRadius: 16,
   },
   activeTab: {

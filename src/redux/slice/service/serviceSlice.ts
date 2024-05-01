@@ -37,6 +37,7 @@ export const serviceSlice = createSlice({
   extraReducers: builder => {
     builder.addCase(getServices.fulfilled, (state, action) => {
       state.services = action.payload;
+      storeDataStorage('SERVICE', state.services);
     });
   },
 });
