@@ -10,15 +10,29 @@ import {CardService, Chip, Header} from '@components';
 
 // constants
 import {FILTER} from '@constants/Consts';
-import {ServiceList} from '@constants';
+
+// store
+import {useAppDispatch, useAppSelector} from '@reduxhooks';
+import {updateBookmark} from '@slice';
 
 type Props = StackScreenProps<RootStackParamList, 'Bookmark'>;
 
 const Bookmark: React.FC<Props> = ({navigation}) => {
+  const dispatch = useAppDispatch();
+
+  const services = useAppSelector(state => state.serviceReducer.services);
+  const bookmarServices = services.filter(service => service.isBookmark);
+
   const [selected, setSelected] = useState('all');
 
-  const renderItem = () => {
-    return <CardService />;
+  const handleBookmark = (id: number) => {
+    dispatch(updateBookmark(id));
+  };
+
+  const renderItem = ({item}: {item: Service}) => {
+    return (
+      <CardService data={item} onBookmark={() => handleBookmark(item.id)} />
+    );
   };
 
   return (
@@ -45,9 +59,9 @@ const Bookmark: React.FC<Props> = ({navigation}) => {
           </ScrollView>
         </View>
         <FlatList
-          data={ServiceList}
+          data={bookmarServices}
           renderItem={renderItem}
-          keyExtractor={(_, index) => index.toString()}
+          keyExtractor={item => item.id.toString()}
           contentContainerStyle={styles.contentContainer}
           showsVerticalScrollIndicator={false}
         />

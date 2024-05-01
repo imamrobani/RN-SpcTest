@@ -8,7 +8,7 @@ export const ServiceList = [
     reviews: '8,289',
     image: 'https://picsum.photos/400/400?random=1',
     category: 'cleaning',
-    isRecommended: false,
+    isRecommended: true,
     isBookmark: false,
   },
   {
@@ -20,7 +20,7 @@ export const ServiceList = [
     reviews: '6,512',
     image: 'https://picsum.photos/400/400?random=2',
     category: 'cleaning',
-    isRecommended: false,
+    isRecommended: true,
     isBookmark: false,
   },
   {

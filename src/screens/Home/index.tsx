@@ -15,10 +15,17 @@ import RecommendList from './fragment/RecommendList';
 import FilterChip from './fragment/FilterChip';
 import SearchHome from './fragment/SearchHome';
 
-import {useAppSelector} from '@reduxhooks';
+// store
+import {useAppDispatch, useAppSelector} from '@reduxhooks';
+import {updateBookmark} from '@slice';
 
 const Home = () => {
+  const dispatch = useAppDispatch();
   const services = useAppSelector(state => state.serviceReducer.services);
+
+  const handleBookmark = (id: number) => {
+    dispatch(updateBookmark(id));
+  };
 
   const renderHeader = () => {
     return (
@@ -32,7 +39,9 @@ const Home = () => {
     );
   };
   const renderItem = ({item}: {item: Service}) => {
-    return <CardService data={item} />;
+    return (
+      <CardService data={item} onBookmark={() => handleBookmark(item.id)} />
+    );
   };
 
   return (
@@ -42,7 +51,7 @@ const Home = () => {
         data={services}
         renderItem={renderItem}
         ListHeaderComponent={renderHeader}
-        keyExtractor={(_, index) => index.toString()}
+        keyExtractor={item => item.id.toString()}
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}
       />

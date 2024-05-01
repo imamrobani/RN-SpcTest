@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {View, Text, Image, TouchableOpacity} from 'react-native';
 
 import styles from './styles';
@@ -8,10 +8,20 @@ import {Icon} from '@components/atoms';
 
 type CardServiceProps = {
   data: Service;
+  onBookmark?: () => void;
 };
 
-const CardService: React.FC<CardServiceProps> = ({data}) => {
+const CardService: React.FC<CardServiceProps> = ({data, onBookmark}) => {
   const [isBookmarked, setIsBookmarked] = useState(data.isBookmark);
+
+  useEffect(() => {
+    setIsBookmarked(data.isBookmark);
+  }, [data.isBookmark]);
+
+  const onHandleBookmark = () => {
+    setIsBookmarked(prevState => !prevState);
+    onBookmark && onBookmark();
+  };
 
   return (
     <View style={styles.container}>
@@ -32,9 +42,7 @@ const CardService: React.FC<CardServiceProps> = ({data}) => {
           </View>
         </View>
       </View>
-      <TouchableOpacity
-        activeOpacity={0.7}
-        onPress={() => setIsBookmarked(!isBookmarked)}>
+      <TouchableOpacity activeOpacity={0.7} onPress={onHandleBookmark}>
         <Icon
           name="icBookmark"
           fillColor={isBookmarked ? Colors.BLACK : 'none'}

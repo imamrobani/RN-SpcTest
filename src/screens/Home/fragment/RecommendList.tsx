@@ -10,18 +10,29 @@ import {CardService} from '@components';
 import TitleSection from './TitleSection';
 
 // store
-import {useAppSelector} from '@reduxhooks';
+import {useAppDispatch, useAppSelector} from '@reduxhooks';
+import {updateBookmark} from '@slice';
 
 const RecommendList = () => {
-  const services = useAppSelector(state => state.serviceReducer.services);
+  const dispatch = useAppDispatch();
 
+  const services = useAppSelector(state => state.serviceReducer.services);
   const recommendedServices = services.filter(service => service.isRecommended);
+
+  const handleBookmark = (id: number) => {
+    dispatch(updateBookmark(id));
+  };
+
   return (
     <>
       <TitleSection title="Recommended services" />
       <View style={styles.gapRecomend}>
         {recommendedServices.map(item => (
-          <CardService key={item.id} data={item} />
+          <CardService
+            key={item.id}
+            data={item}
+            onBookmark={() => handleBookmark(item.id)}
+          />
         ))}
       </View>
     </>
