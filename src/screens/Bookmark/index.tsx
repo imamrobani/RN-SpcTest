@@ -24,33 +24,21 @@ const Bookmark: React.FC<Props> = ({navigation}) => {
   const bookmarServices = services.filter(service => service.isBookmark);
 
   const [selected, setSelected] = useState('all');
+  const [dataBookmark, setDataBookmark] = useState(bookmarServices);
+
+  const filterBookmarkByCategory = (val: string) => {
+    if (val === 'all') {
+      setDataBookmark(bookmarServices);
+    } else {
+      const filteredData = bookmarServices.filter(
+        service => service.category === val,
+      );
+      setDataBookmark(filteredData);
+    }
+  };
 
   const handleBookmark = (id: number) => {
     dispatch(updateBookmark(id));
-  };
-
-  const renderFilter = () => {
-    if (bookmarServices.length > 0) {
-      return (
-        <View style={styles.filterContainer}>
-          <ScrollView
-            horizontal
-            contentContainerStyle={styles.filterContainer}
-            showsHorizontalScrollIndicator={false}>
-            {FILTER.map(item => (
-              <Chip
-                key={item.id}
-                label={item.label}
-                isSelected={selected === item.id}
-                onPress={() => setSelected(item.id)}
-              />
-            ))}
-          </ScrollView>
-        </View>
-      );
-    }
-
-    return null;
   };
 
   const renderItem = ({item}: {item: Service}) => {
@@ -75,9 +63,27 @@ const Bookmark: React.FC<Props> = ({navigation}) => {
         iconLeft={'icMore'}
       />
       <View style={styles.container}>
-        {renderFilter()}
+        <View style={styles.filterContainer}>
+          <ScrollView
+            horizontal
+            contentContainerStyle={styles.filterContainer}
+            showsHorizontalScrollIndicator={false}>
+            {FILTER.map(item => (
+              <Chip
+                key={item.id}
+                label={item.label}
+                isSelected={selected === item.id}
+                onPress={() => {
+                  setSelected(item.id);
+                  filterBookmarkByCategory(item.id);
+                }}
+              />
+            ))}
+          </ScrollView>
+        </View>
         <FlatList
-          data={bookmarServices}
+          // data={bookmarServices}
+          data={dataBookmark}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           contentContainerStyle={styles.contentContainer}
