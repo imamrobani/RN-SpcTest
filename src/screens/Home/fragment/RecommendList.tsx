@@ -2,17 +2,26 @@ import React from 'react';
 import {View} from 'react-native';
 
 import styles from './styles';
+
+// components
 import {CardService} from '@components';
-import {ServiceList} from '@constants';
+
+// fragment
 import TitleSection from './TitleSection';
 
+// store
+import {useAppSelector} from '@reduxhooks';
+
 const RecommendList = () => {
+  const services = useAppSelector(state => state.serviceReducer.services);
+
+  const recommendedServices = services.filter(service => service.isRecommended);
   return (
     <>
       <TitleSection title="Recommended services" />
       <View style={styles.gapRecomend}>
-        {ServiceList.slice(0, 2).map(item => (
-          <CardService key={item.id} />
+        {recommendedServices.map(item => (
+          <CardService key={item.id} data={item} />
         ))}
       </View>
     </>

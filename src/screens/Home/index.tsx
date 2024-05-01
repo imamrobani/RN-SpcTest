@@ -3,7 +3,6 @@ import {FlatList, View} from 'react-native';
 
 // styles
 import styles from './styles';
-import {ServiceList} from '@constants';
 
 // component
 import {CardService} from '@components';
@@ -16,7 +15,11 @@ import RecommendList from './fragment/RecommendList';
 import FilterChip from './fragment/FilterChip';
 import SearchHome from './fragment/SearchHome';
 
+import {useAppSelector} from '@reduxhooks';
+
 const Home = () => {
+  const services = useAppSelector(state => state.serviceReducer.services);
+
   const renderHeader = () => {
     return (
       <>
@@ -28,15 +31,15 @@ const Home = () => {
       </>
     );
   };
-  const renderItem = () => {
-    return <CardService />;
+  const renderItem = ({item}: {item: Service}) => {
+    return <CardService data={item} />;
   };
 
   return (
     <View style={styles.page}>
       <HeaderHome />
       <FlatList
-        data={ServiceList}
+        data={services}
         renderItem={renderItem}
         ListHeaderComponent={renderHeader}
         keyExtractor={(_, index) => index.toString()}
