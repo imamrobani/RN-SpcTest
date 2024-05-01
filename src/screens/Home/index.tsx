@@ -56,11 +56,13 @@ const Home = () => {
       <HeaderHome />
       <FlatList
         data={services}
+        initialNumToRender={10}
         renderItem={renderItem}
         ListHeaderComponent={renderHeader}
         keyExtractor={item => item.id.toString()}
         contentContainerStyle={styles.contentContainer}
         showsVerticalScrollIndicator={false}
+        maxToRenderPerBatch={10}
       />
     </View>
   );

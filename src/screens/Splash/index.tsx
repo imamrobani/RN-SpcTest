@@ -1,11 +1,12 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 import React, {useEffect, useRef} from 'react';
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Image} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
+import {CommonActions} from '@react-navigation/native';
 
 // styles
 import styles from './styles';
-import {Fonts} from '@constants';
+import {ImgLogo} from '@assets';
 
 type Props = StackScreenProps<RootStackParamList, 'Splash'>;
 
@@ -14,7 +15,12 @@ const Splash: React.FC<Props> = ({navigation}) => {
 
   useEffect(() => {
     timeoutRef.current = setTimeout(() => {
-      navigation.navigate('MainApp');
+      navigation.dispatch(
+        CommonActions.reset({
+          index: 0,
+          routes: [{name: 'MainApp'}],
+        }),
+      );
     }, 2000);
 
     return () => {
@@ -26,11 +32,7 @@ const Splash: React.FC<Props> = ({navigation}) => {
 
   return (
     <View style={styles.page}>
-      <TouchableOpacity
-        activeOpacity={0.7}
-        onPress={() => navigation.navigate('MainApp')}>
-        <Text style={{fontFamily: Fonts.OUTFIT_REGULAR}}>Splash Screen</Text>
-      </TouchableOpacity>
+      <Image source={ImgLogo} style={styles.logo} />
     </View>
   );
 };
