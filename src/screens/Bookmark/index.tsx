@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {View, ScrollView, FlatList} from 'react-native';
+import {View, ScrollView, FlatList, Text} from 'react-native';
 import {StackScreenProps} from '@react-navigation/stack';
 
 // styles
@@ -29,20 +29,9 @@ const Bookmark: React.FC<Props> = ({navigation}) => {
     dispatch(updateBookmark(id));
   };
 
-  const renderItem = ({item}: {item: Service}) => {
-    return (
-      <CardService data={item} onBookmark={() => handleBookmark(item.id)} />
-    );
-  };
-
-  return (
-    <View style={styles.page}>
-      <Header
-        label="My BookMark"
-        onBack={() => navigation.goBack()}
-        iconLeft={'icMore'}
-      />
-      <View style={styles.container}>
+  const renderFilter = () => {
+    if (bookmarServices.length > 0) {
+      return (
         <View style={styles.filterContainer}>
           <ScrollView
             horizontal
@@ -58,12 +47,42 @@ const Bookmark: React.FC<Props> = ({navigation}) => {
             ))}
           </ScrollView>
         </View>
+      );
+    }
+
+    return null;
+  };
+
+  const renderItem = ({item}: {item: Service}) => {
+    return (
+      <CardService data={item} onBookmark={() => handleBookmark(item.id)} />
+    );
+  };
+
+  const renderEmpty = () => {
+    return (
+      <View style={styles.emptyContainer}>
+        <Text style={styles.emptyText}>no data is bookmarked</Text>
+      </View>
+    );
+  };
+
+  return (
+    <View style={styles.page}>
+      <Header
+        label="My BookMark"
+        onBack={() => navigation.goBack()}
+        iconLeft={'icMore'}
+      />
+      <View style={styles.container}>
+        {renderFilter()}
         <FlatList
           data={bookmarServices}
           renderItem={renderItem}
           keyExtractor={item => item.id.toString()}
           contentContainerStyle={styles.contentContainer}
           showsVerticalScrollIndicator={false}
+          ListEmptyComponent={renderEmpty}
         />
       </View>
     </View>

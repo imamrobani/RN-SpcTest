@@ -1,4 +1,5 @@
-import React from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
+import React, {useEffect} from 'react';
 import {FlatList, View} from 'react-native';
 
 // styles
@@ -17,11 +18,17 @@ import SearchHome from './fragment/SearchHome';
 
 // store
 import {useAppDispatch, useAppSelector} from '@reduxhooks';
-import {updateBookmark} from '@slice';
+import {getServices, updateBookmark} from '@slice';
+import {storeDataStorage} from '@libraries';
 
 const Home = () => {
   const dispatch = useAppDispatch();
   const services = useAppSelector(state => state.serviceReducer.services);
+
+  useEffect(() => {
+    dispatch(getServices());
+    storeDataStorage('FIRST_LOAD', true);
+  }, []);
 
   const handleBookmark = (id: number) => {
     dispatch(updateBookmark(id));

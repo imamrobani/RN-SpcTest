@@ -1,12 +1,22 @@
-import {createSlice} from '@reduxjs/toolkit';
+import {createAsyncThunk, createSlice} from '@reduxjs/toolkit';
+import {getDataStorage, storeDataStorage} from '@libraries';
 import {ServiceList} from '@constants';
+
+export const getServices = createAsyncThunk('service/fetch-service', () => {
+  const isFirstLoad = getDataStorage('FIRST_LOAD');
+  if (isFirstLoad) {
+    const storageService = getDataStorage('SERVICE') || [];
+    return storageService;
+  }
+  return ServiceList;
+});
 
 type InitStateProps = {
   services: Service[];
 };
 
 const initialState: InitStateProps = {
-  services: ServiceList,
+  services: [],
 };
 
 export const serviceSlice = createSlice({
@@ -20,7 +30,14 @@ export const serviceSlice = createSlice({
         }
         return service;
       });
+
+      storeDataStorage('SERVICE', state.services);
     },
+  },
+  extraReducers: builder => {
+    builder.addCase(getServices.fulfilled, (state, action) => {
+      state.services = action.payload;
+    });
   },
 });
 

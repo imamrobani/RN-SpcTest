@@ -1,5 +1,6 @@
 import {StyleSheet} from 'react-native';
-import {scale} from '@utils';
+import {deviceHeight, scale} from '@utils';
+import {Colors, Fonts} from '@constants';
 
 const styles = StyleSheet.create({
   page: {flex: 1},
@@ -16,6 +17,16 @@ const styles = StyleSheet.create({
     flexGrow: 1,
     padding: scale(16),
     gap: 16,
+  },
+  emptyContainer: {
+    justifyContent: 'center',
+    alignItems: 'center',
+    height: deviceHeight() / 2,
+  },
+  emptyText: {
+    fontFamily: Fonts.OUTFIT_SEMIBOLD,
+    fontSize: scale(16),
+    color: Colors.SPC_GRAY,
   },
 });
 
