@@ -15,6 +15,8 @@ module.exports = {
           '@routes': './src/routes',
           '@utils': './src/utils',
           '@screens': './src/screens',
+          '@reduxhooks': './src/redux/hooks.ts',
+          '@slice': './src/redux/slice',
         },
       },
     ],

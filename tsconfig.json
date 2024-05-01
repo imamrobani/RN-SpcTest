@@ -14,7 +14,9 @@
       "@libraries": ["src/libraries"],
       "@routes": ["src/routes"],
       "@utils": ["src/utils"],
-      "@screens": ["src/screens"]
+      "@screens": ["src/screens"],
+      "@reduxhooks": ["src/redux/hooks.ts"],
+      "@slice": ["src/redux/slice"]
     }
   }
 }

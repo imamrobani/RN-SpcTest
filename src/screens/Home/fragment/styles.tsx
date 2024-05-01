@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native';
-import {scale} from '@utils';
+import {deviceWidth, scale} from '@utils';
 import {Colors, Fonts} from '@constants';
 
 const styles = StyleSheet.create({
@@ -58,10 +58,14 @@ const styles = StyleSheet.create({
   },
 
   // banner section
+  bannerContainer: {
+    width: deviceWidth() - scale(32),
+    borderRadius: 30,
+  },
   banner: {
-    width: '100%',
+    width: deviceWidth() - scale(32),
     height: scale(155),
-    borderRadius: scale(30),
+    borderRadius: 30,
   },
 
   // category section

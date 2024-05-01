@@ -1,5 +1,5 @@
 import React from 'react';
-import {Image} from 'react-native';
+import {Image, ScrollView, View} from 'react-native';
 
 import styles from './styles';
 import {ImgBanner} from '@assets';
@@ -9,7 +9,16 @@ const BannerSection = () => {
   return (
     <>
       <TitleSection title="Special Offers" />
-      <Image source={ImgBanner} style={styles.banner} />
+      <View style={styles.bannerContainer}>
+        <ScrollView
+          pagingEnabled
+          horizontal
+          showsHorizontalScrollIndicator={false}>
+          <Image source={ImgBanner} style={styles.banner} />
+          <Image source={ImgBanner} style={styles.banner} />
+          <Image source={ImgBanner} style={styles.banner} />
+        </ScrollView>
+      </View>
     </>
   );
 };
